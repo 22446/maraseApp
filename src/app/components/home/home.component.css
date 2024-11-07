@@ -1,0 +1,18 @@
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url("../../../assets/Images/headerImg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.Btns {
+   
+    background:linear-gradient(to left, red, red 50%,  white 50%, white);
+    color:black;
+    font-weight:bold;
+  }
+
+section.explore{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url("../../../assets/Images/headerImg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

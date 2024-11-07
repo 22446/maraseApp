@@ -1,0 +1,40 @@
+<app-reuse-able-header [title]="' عروض الرحلات'"></app-reuse-able-header> 
+<section class="bg-light py-4">
+    <div class="container">
+<div class="row rounded-3 my-3 gy-3">   
+    @for (product of offersData.data;track $index) 
+    {
+      <div class="col-lg-3 col-md-4 col-6 ">
+          <div class="card product position-relative">
+        
+              <i 
+              class="img50 top-0 end-0 pe-2 pt-1 fs-2 cursor-pointer position-absolute">
+           </i>
+           
+            <div >
+              <img [src]="product.photo" class="w-100 card-img-top" style="height: 220px;" >
+              <div class="cart-title px-2">
+              <p class="text-muted fw-bold text-end">{{product.country}}{{product.city}}</p>
+              <p class="text-muted fw-bold text-end"><span class="text-danger">اسم العرض :</span>{{product.offer_name.split(' ',2).join(' ')}}</p>
+              <p class="text-muted fw-bold text-end"><span class="text-danger">سعر العرض بعد الخصم :</span>{{product.offer_price_value}}</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="py-2 mx-2">
+                    <button class="btn btn-outline-dark w-100">add </button>
+                  </div>
+                  <div class="text-end">
+                    <p class="text-muted m-0 p-0">السعر قبل الخصم</p>
+                  <span class="fw-bold text-danger tex-end">{{product.price}}EGP</span>
+                </div>
+                
+              </div>
+              </div>
+            </div>
+          </div>
+      
+      </div>
+    }
+    
+    
+  </div>
+  </div>
+</section>

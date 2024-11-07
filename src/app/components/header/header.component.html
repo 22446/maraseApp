@@ -1,0 +1,131 @@
+<nav class="navbar navbar-expand-lg p-3 navbar-white bg-white">
+  <div class="container">
+    <a
+      class="navbar-brand d-flex d-lg-none nowrap align-items-center"
+      routerLink="home"
+    >
+      <div>
+        <img src="../../../assets/Images/Group 41657.png" alt="" />
+      </div>
+      <div></div>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul
+        class="navbar-nav d-flex align-items-center mt-2 flex-row gap-2 justify-content-lg-start justify-content-end"
+      >
+        <li class="nav-item">
+          <button (click)="showDialog()" class="btn btn-info"  icon="fa-solid fa-user">Login<i class="fa-solid fa-user"></i></button>
+          <p-dialog
+            header="Login"
+            [modal]="true"
+            [(visible)]="visible"
+            [style]="{ width: '25rem' }"
+          >
+            
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+              
+              <input
+                pInputText
+                id="username"
+                class="flex-auto"
+                autocomplete="off"
+                placeholder="user name"
+              />
+            </div>
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-5">
+              
+              <input
+                pInputText
+                id="email"
+                class="flex-auto"
+                autocomplete="off"
+                placeholder="Email"
+              />
+            </div>
+            <div class="d-flex justify-content-end gap-2">
+              <button (click)="showDialogRegister()" class="btn btn-warning" (click)="visible = false">Register</button>
+              <button  
+              severity="secondary"
+              (click)="visible = false"
+              class="btn btn-danger" >Cancel</button>
+              <button class="btn btn-success" (click)="visible = false">Login</button>
+            </div>
+          </p-dialog>
+         
+          <p-dialog header="Register Now" [modal]="true" [(visible)]="visibleregister" [style]="{ width: '25rem' }">
+             
+              <div class="d-flex align-items-center gap-2 mb-3">
+                  
+                  <input pInputText placeholder="user name" id="username" class="flex-auto form-control" autocomplete="off" />
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                  
+                  <input pInputText id="email" placeholder="Email" class="flex-auto form-control" autocomplete="off" />
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                
+                <input type="password" id="Password" placeholder="Password" class="flex-auto form-control" autocomplete="off" />
+            </div>
+              <div class="d-flex justify-content-end gap-2">
+                  <button class="btn btn-danger" severity="secondary" (click)="visibleregister = false">Cancel</button>
+                  <button  class="btn btn-success" (click)="visibleregister = false">Register</button>
+              </div>
+          </p-dialog>
+          
+        </li>
+        <li class="nav-item">
+          <i class="fa-regular fa-bell"></i>
+        </li>
+      </ul>
+      <ul class="navbar-nav mx-auto align-items-end">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home" routerLinkActive="text-danger"
+            >الرئيسيه</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">من نحن</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/travels"
+            routerLinkActive="text-danger"
+            >الرحلات</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/offers"
+            routerLinkActive="text-danger"
+            >العروض</a
+          >
+        </li>
+      </ul>
+
+      <div class="d-flex justify-content-center d-lg-flex d-none">
+        <a
+          class="navbar-brand d-flex nowrap align-items-center"
+          routerLink="home"
+        >
+          <div>
+            <img src="../../../assets/Images/Group 41657.png" alt="" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

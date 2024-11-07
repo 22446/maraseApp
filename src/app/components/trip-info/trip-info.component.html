@@ -1,0 +1,130 @@
+<header>
+  <div class="container">
+    <div class="d-flex align-items center justify-content-between">
+      <div>
+        <p class="text-muted">
+          الرئيسية | رحلات شهر العسل | رحلة شهر العسل الاولي
+        </p>
+      </div>
+      <div>
+        <p class="text-muted">شارك الاعلان</p>
+      </div>
+    </div>
+    <div class="row my-4 align-items-center">
+      <div class="col-lg-8 col-12">
+        <img src="../../../assets/Images/TripInfoHead.png"  #imgOld (click)="click($event)" class="imgmain" alt="">
+      </div>
+      <div class="col-4 d-none classimg d-lg-flex align-items-center flex-column gap-3">
+        @for (item of data.photos ;track $index) 
+        {
+        <img [src]="item" #img   (click)="click($event)" alt="" />
+        }
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-lg-8 col-12 d-flex flex-column gap-2">
+        <div class="d-flex align-items-center justify-content-between border rounded p-2">
+          <div>
+            <h3 class="fs-20 fw-500">{{data.trip_name}}</h3>
+            <p class="text-muted fs-12">{{data.country}}{{data.city}}</p>
+          </div>
+
+          <div>
+            <p class="text-muted text-center">مــــــدة الجولة</p>
+            <h3 class="fw-bold text-danger fs-30">{{data.duration}} ايام كاملة</h3>
+          </div>
+        </div>
+        <div class="border rounded">
+          <div class="border rounded p-2">
+            <h4 class="fs-20 fw-500">الوصف</h4>
+          </div>
+          <div class="border rounded p-2">
+            <p>
+             {{data.description}}
+            </p>
+          </div>
+          <div class="border-top rounded p-2">
+            <h4 class="fs-20 fw-500">ما نقدمة لخدمتك</h4>
+          </div>
+          <div class="border-bottom rounded p-2">
+            <ul class="d-flex justify-content-between">
+              @for (item of data.services; track $index)
+               {
+                <li>
+                  <i class="fa-solid fa-bed"></i
+                  ><span class="fw-bold">{{item}}</span>
+                </li>
+               }
+              
+  
+            </ul>
+          </div>
+          <div class="border-top rounded p-2">
+            <h4>أشياء يجب معرفتها</h4>
+          </div>
+          <div>
+            <ul class="d-flex flex-column gap-2">
+              <li>
+                <i class="fa-solid fa-caret-left text-danger"></i
+                ><span class="fw-bold text-muted">هذه الجولة غير مناسبة للأطفال</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-caret-left text-danger"></i
+                ><span class="fw-bold text-muted">هذه الجولة غير مناسبة للمدخنين</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-caret-left text-danger"></i
+                ><span class="fw-bold text-muted"
+                  >هذه الجولة غير مناسبة للحيوانات الاليفة</span
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-caret-left text-danger"></i
+                ><span class="fw-bold text-muted">هذه الجولة غير مناسبة لكبار السن</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="my-2">
+          <h5 class="fw-500">موقع الجولة </h5>
+        </div>
+        <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13676.241138071508!2d31.36927035!3d31.024569999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1730889548853!5m2!1sar!2seg" width="100%" class="rounded" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-12">
+        <div class='border rounded'>
+        <div class="d-flex align-items-center justify-content-between border rounded p-3">
+            
+            <div>
+              <h3 class="text-muted fs-18 ">تكلفه الفرد</h3>
+            </div>
+            <div>
+              <h3 class="fw-bold text-danger h1">{{data.price}} جنيه</h3>
+            </div>
+          </div>
+          <form class="p-2">
+            <div class="form-group my-3">
+              <label for="exampleFormControlSelect1"class='fw-bold my-2'>حدد تاريخ بدء الجولة</label>
+              <input type='date'  min="2024-01-01" max="2100-01-01" class="form-control mx-auto p-2" id="exampleFormControlSelect1">
+                
+            </div>
+            <div class="form-group my-3">
+                <label for="exampleFormControlSelect1" class="fw-bold my-2">عدد الزائرين</label>
+                <input type="number" placeholder="حدد عدد الزائرين" min="1" class="form-control mx-auto p-2"  id="exampleFormControlSelect1"/>
+                 
+              </div>
+              <div class="form-group my-3">
+                <label for="exampleFormControlSelect1" class="fw-bold my-2">عدد الاطفال</label>
+                <input  class="form-control mx-auto p-2" min="0" type="number" placeholder="حدد عدد الاطفال"   id="exampleFormControlSelect1"/>
+                  
+              </div>
+          </form>
+        </div>
+        <button class="btn btn-danger p-3 my-2 w-100">حجز الان</button>
+      </div>
+    </div>
+  </div>
+</header>

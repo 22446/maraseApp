@@ -1,0 +1,76 @@
+<header class="d-flex align-items-center justify-content-end px-3">
+    <div class="container">
+    <div class="d-flex align-items-end flex-column">
+        <h3 class="text-white fw-bold">عرض لفتره محدوده</h3>
+        <h1 class="text-white fw-bold">رحله لمرسى علم</h1>
+
+        <button class="Btns d-flex mt-2 gap-2 justify-content-between  btn btn-danger p-3 rounded-right rounded-left">
+            <p class="p-0 m-0">2000EGP</p>
+            <p class="fw-bold p-0 m-0">تكلفه الفرد</p>
+        </button>
+    </div>
+</div>
+</header>
+
+<section class="py-4">
+    <div>
+    <h3 class='text-center'>اختر اهتمامتك من الرحلات</h3>
+    <p class='text-center text-muted'>قم باختيار نوع الرحلات المناسبة لك </p>
+    </div>
+    <div class="container">
+    <div>
+        <owl-carousel-o [options]="customOptions">
+        @for (item of dataCategoryHome.data; track $index) {
+        <ng-template carouselSlide>
+            <img [src]="item.photo" class='p-2' style="width: 250px; height: 200px;" alt="sliders">
+            <p>{{item.description}}</p>
+        </ng-template>  
+        
+    }  
+    </owl-carousel-o>
+    </div>
+    </div>
+</section>
+
+
+
+<app-items FirstTitle="اشهر العروض" [INputNumber]="0" [lastNumber]="4" imgsrc="../../../assets/Images/Rectangle46866.png" seconedTitle="العروض الحصرية لدينا مخصصه لك"></app-items>
+<app-items FirstTitle="العروض المقترحه"   [INputNumber]="4" [lastNumber]="8"  imgsrc="../../../assets/Images/Rectangle46879.png" seconedTitle="افضل العروض المختارة خصيصا لك"></app-items>
+<div class="bg-light py-4">
+<div class="container">
+<section class="explore rounded">
+    <div class="d-flex align-items-center justify-content-center flex-column p-4">
+        <h1 class="text-white">افضل الرحلات الداخلية فى مصر</h1>
+        <button class="btn btn-outline-light rounded">اكتشف المزيد</button>
+    </div>
+</section>
+</div>
+</div>
+
+<app-items FirstTitle="افضل الجولات"  [INputNumber]="8" [lastNumber]="12"  imgsrc="../../../assets/Images/forSlidethree.png" seconedTitle="افضل العروض المختارة خصيصا لك"></app-items>
+
+
+<div class="bg-light py-4">
+    <div class="container">
+    <section class="bg-danger rounded d-flex align-items-center">
+        <div class="col-md-6 d-md-block d-none">
+            <img src="../../../assets/Images/phoen2.png" alt="">
+            <img src="../../../assets/Images/phone1.png" alt="">
+        </div>
+        <div class="col-md-6 col-12">
+        <div class="d-flex align-items-center justify-content-center flex-column p-4">
+            <p class="text-white">حمل تطبيق مراسى </p>
+            <h3 class="text-white">أكتشف افضل العروض والرحلات </h3>
+            <p>تحميل التطبيق</p>
+            <button class="btn btn-outline-light rounded">اكتشف المزيد</button>
+            <div class="d-flex mt-3 gap-3">
+                <img src="../../../assets/Images/Component 2.png" alt="">
+                <img src="../../../assets/Images/Component 2.png" alt="">
+            </div>
+        </div>
+    </div>
+   
+    </section>
+    </div>
+    </div>
+ 

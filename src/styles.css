@@ -1,0 +1,24 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+ul{
+    list-style: none;
+}
+.fs-30{
+    font-size: 30px;
+    line-height: 31px;
+}
+.fs-18{
+    font-size: 18px;
+}
+.fs-20{
+    font-size: 20px;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fs-12{
+    font-size: 12px;
+
+}
